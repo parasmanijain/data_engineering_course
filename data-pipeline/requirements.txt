@@ -9,3 +9,9 @@ prefect>=3.0.0,<4.0.0
 
 # Configuration Management
 python-dotenv>=1.0.0,<2.0.0
+
+boto3-stubs[s3]==1.34.0  # Optional: for S3 type hints
+
+mypy-boto3-s3==1.34.91
+
+
