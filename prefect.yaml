@@ -22,20 +22,18 @@ pull:
 
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
-- name: hello-world-task-deployment
+- name: project-deployment
   version: null
   tags: 
     - "tasks"
     - "tutorials"
-    - "hands-on"
-  description: "Deployment showing the sample flow"
+    - "project"
+  description: "Deployment of a semi-real project"
   schedule: 
-    interval: 60 # Run the flow every 1 minutes
-  flow_name: hello-world-with-task
-  entrypoint: data-pipeline/tests/Prefect_Example.py:hello_world_with_task
-  parameters: 
-    name: "Simple Example"
+    interval: 120 # Run the flow every 2 minutes
+  flow_name: ecommerce_etl_pipeline
+  entrypoint: /Users/parjain8/Desktop/Coding/DataEngineering/data_engineering_course/data-pipeline/src/orchestration/prefect_flows.py:process_ecommerce_data
   work_pool:
-    name: test-pool
+    name: project-pool
     work_queue_name: null
     job_variables: {}
